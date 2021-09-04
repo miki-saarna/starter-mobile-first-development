@@ -2,8 +2,18 @@ main {
   margin-top: 60px;
 }
 
-main h1 {
+.container-text {
   margin: 0 10px;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle; 
+  /* 'vertical-align' removes the additional 3 pixels added to the bottom of images */
+}
+
+main h1 {
+  margin: 0 10px 27px;
   text-align: center;
   font-family: "Amatic SC", cursive;
   font-size: 65px;
@@ -26,4 +36,58 @@ main h3 {
 main p {
   font-family: "Roboto", sans-serif;
   margin-top: 0;
+}
+
+@media all and (min-width: 768px) {
+  .container-text {
+    margin: 50px 100px;
+    border: 1px solid grey;
+    padding: 40px;
+    border-radius: 4px;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .page-padding {
+    padding: 0 40px;
+  }
+ 
+  .container {
+    margin-bottom: 140px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+  }
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  
+  .image-flex-2 {
+    flex: 2;
+  }
+  .container-text {
+    border: none;
+    margin: 0;
+    padding: 0; 
+  }
+  main > .container {
+    margin-bottom: 0;
+    background-color: #786048;
+    justify-content: space-around;
+    padding: 10px 30px;
+    }
+
+  main > .container > div {
+  width: 220px;
+  }
+  
+  main > .container > div > img {
+    justify-content: center;
 }
